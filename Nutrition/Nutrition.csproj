@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Repositories\Nutrition.Repositories.csproj" />
+    <ProjectReference Include="..\Nutrition.Services\Nutrition.Services.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.ViewModels.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels\Nutrition.ViewModels.csproj" />
+    <ProjectReference Include="..\Nutrition.Views\Nutrition.Views.csproj" />
+  </ItemGroup>
+
+</Project>

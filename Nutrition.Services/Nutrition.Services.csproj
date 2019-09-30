@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Domain\Nutrition.Domain.csproj" />
+    <ProjectReference Include="..\Nutrition.Dtos\Nutrition.Dtos.csproj" />
+    <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
+    <ProjectReference Include="..\Nutrition.Repositories.Contracts\Nutrition.Repositories.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.Services.Contracts\Nutrition.Services.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<Application x:Class="Nutrition.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Nutrition">
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:InterfaceTemplateSelector x:Key="InterfaceTemplateSelector"></local:InterfaceTemplateSelector>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Nutrition.Views;component/Views/Home.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Nutrition.Views;component/Views/Aliment.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

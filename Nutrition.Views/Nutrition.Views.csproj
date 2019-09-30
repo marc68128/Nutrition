@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.ViewModels.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\Aliment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
