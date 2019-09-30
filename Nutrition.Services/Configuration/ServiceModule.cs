@@ -8,6 +8,7 @@ namespace Nutrition.Services.Configuration
         public override void Load()
         {
             Bind<IAlimentService>().To<AlimentService>().InSingletonScope();
+            Bind<IMealService>().To<MealService>().InSingletonScope();
         }
     }
 }

@@ -7,8 +7,9 @@ namespace Nutrition.ViewModels.Configuration
     {
         public ViewModelsMappingProfile()
         {
-            //CreateTwoWayMap<AlimentDto, AlimentViewModel>();
             CreateTwoWayMap<AlimentDto, IAlimentViewModel>();
+            CreateTwoWayMap<MealDto, IMealViewModel>();
+            CreateTwoWayMap<MealPartDto, IMealPartViewModel>();
         }
 
         private void CreateTwoWayMap<T1, T2>()
