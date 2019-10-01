@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{9BACD5F9-814
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition.Api", "Nutrition.Api\Nutrition.Api.csproj", "{BF8103EC-1830-4802-B91E-E8B95E0DE81F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition.Api.ViewModels", "Nutrition.Api.ViewModels\Nutrition.Api.ViewModels.csproj", "{B4C91242-5183-4643-94FE-BC6FC582928D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{492AEFD7-48B7-46FD-8C6B-E21CDD7238EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,10 @@ Global
 		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C91242-5183-4643-94FE-BC6FC582928D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C91242-5183-4643-94FE-BC6FC582928D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C91242-5183-4643-94FE-BC6FC582928D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C91242-5183-4643-94FE-BC6FC582928D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +112,7 @@ Global
 		{7D7F60E0-322F-4109-92DC-6EB8C9D950F0} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
 		{3939630F-961D-460E-A404-92BC2F21E99C} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
 		{BF8103EC-1830-4802-B91E-E8B95E0DE81F} = {9BACD5F9-814E-468F-8700-08B6ADB03A8B}
+		{B4C91242-5183-4643-94FE-BC6FC582928D} = {9BACD5F9-814E-468F-8700-08B6ADB03A8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4938BA26-1EA3-417F-B59F-752B8FF33133}

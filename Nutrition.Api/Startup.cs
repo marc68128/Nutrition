@@ -15,6 +15,7 @@ using Nutrition.Services.Configuration;
 using System;
 using System.Threading;
 using AutoMapper;
+using Nutrition.Api.ViewModels.Configuration;
 
 namespace Nutrition.Api
 {
@@ -100,6 +101,7 @@ namespace Nutrition.Api
             kernel.Bind<IMapper>().ToConstant(new Mapper(new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<ServicesMappingProfile>();
+                cfg.AddProfile<ViewModelsMappingProfile>();
             })));
 
 

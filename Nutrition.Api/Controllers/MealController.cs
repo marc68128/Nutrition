@@ -3,6 +3,8 @@ using Microsoft.Extensions.Logging;
 using Nutrition.Dtos;
 using Nutrition.Services.Contracts;
 using System.Threading.Tasks;
+using AutoMapper;
+using Nutrition.Api.ViewModels;
 
 namespace Nutrition.Api.Controllers
 {
@@ -11,22 +13,24 @@ namespace Nutrition.Api.Controllers
     public class MealController : ControllerBase
     {
         private readonly ILogger<MealController> _logger;
+        private readonly IMapper _mapper;
         private readonly IMealService _mealService;
 
-        public MealController(ILogger<MealController> logger, IMealService mealService)
+        public MealController(ILogger<MealController> logger, IMapper mapper, IMealService mealService)
         {
             _logger = logger;
+            _mapper = mapper;
             _mealService = mealService;
         }
 
         [HttpGet] //meal?goalCalories=480&goalProtides=38&goalLipides=17&goalGlucides=45&alimentCount=4
-        public async Task<MealDto> Get(double goalCalories, double goalProtides, double goalLipides, double goalGlucides, int alimentCount)
+        public async Task<MealViewModel> Get(double goalCalories, double goalProtides, double goalLipides, double goalGlucides, int alimentCount)
         {
             var meal = await _mealService.GetRandomMealAsync(
                 new MealGoalsDto { Calories = goalCalories, Glucides = goalGlucides, Lipides = goalLipides, Protides = goalProtides },
                 alimentCount);
 
-            return meal;
+            return _mapper.Map<MealViewModel>(meal);
         }
     }
 }
