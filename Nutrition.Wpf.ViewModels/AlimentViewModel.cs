@@ -1,6 +1,9 @@
-﻿namespace Nutrition.Api.ViewModels
+﻿using Nutrition.Core.Enums;
+using Nutrition.Wpf.ViewModels.Contracts;
+
+namespace Nutrition.Wpf.ViewModels
 {
-    public class AlimentViewModel
+    internal class AlimentViewModel : BaseViewModel, IAlimentViewModel
     {
         public int Quantity { get; set; }
         public string Name { get; set; }
@@ -8,8 +11,8 @@
         public double Protides { get; set; }
         public double Lipides { get; set; }
         public double Glucides { get; set; }
-        public string Category { get; set; }
+        public EnumAlimentCategory Category { get; set; }
         public string SubCategory { get; set; }
-        public string Unit { get; set; }
+        public EnumUnit Unit { get; set; }
     }
 }

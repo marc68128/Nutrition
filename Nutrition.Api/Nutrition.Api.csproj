@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -10,9 +10,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nutrition.Api.ViewModels\Nutrition.Api.ViewModels.csproj" />
-    <ProjectReference Include="..\Nutrition.Repositories\Nutrition.Repositories.csproj" />
-    <ProjectReference Include="..\Nutrition.Services.Contracts\Nutrition.Services.Contracts.csproj" />
-    <ProjectReference Include="..\Nutrition.Services\Nutrition.Services.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Dtos\Nutrition.Core.Dtos.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Repositories\Nutrition.Core.Repositories.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Services.Contracts\Nutrition.Core.Services.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Services\Nutrition.Core.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

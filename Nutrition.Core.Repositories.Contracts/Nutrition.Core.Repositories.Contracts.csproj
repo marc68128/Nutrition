@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Core.Domain\Nutrition.Core.Domain.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
+    <ProjectReference Include="..\Nutrition.Domain\Nutrition.Domain.csproj" />
+    <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
+  </ItemGroup>
+
+</Project>

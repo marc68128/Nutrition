@@ -1,14 +1,15 @@
 ﻿using Nutrition.Core.Dtos;
+using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition.Api.ViewModels.Configuration
+namespace Nutrition.Wpf.ViewModels.Configuration
 {
     public class ViewModelsMappingProfile : AutoMapper.Profile
     {
         public ViewModelsMappingProfile()
         {
-            CreateTwoWayMap<AlimentDto, AlimentViewModel>();
-            CreateTwoWayMap<MealDto, MealViewModel>();
-            CreateTwoWayMap<MealPartDto, MealPartViewModel>();
+            CreateTwoWayMap<AlimentDto, IAlimentViewModel>();
+            CreateTwoWayMap<MealDto, IMealViewModel>();
+            CreateTwoWayMap<MealPartDto, IMealPartViewModel>();
         }
 
         private void CreateTwoWayMap<T1, T2>()

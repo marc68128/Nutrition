@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0" />
+    <PackageReference Include="Microsoft.NETCore.Targets" Version="3.0.0" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Core.Dtos\Nutrition.Core.Dtos.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Services.Contracts\Nutrition.Core.Services.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.Wpf.ViewModels.Contracts\Nutrition.Wpf.ViewModels.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\3.0.0\ref\netcoreapp3.0\PresentationCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

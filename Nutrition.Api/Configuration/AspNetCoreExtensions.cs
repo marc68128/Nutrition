@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using System;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Nutrition.Api.Configuration
 {

@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Nutrition.Dtos;
-using Nutrition.Services.Contracts;
-using System.Threading.Tasks;
-using AutoMapper;
 using Nutrition.Api.ViewModels;
+using Nutrition.Core.Dtos;
+using Nutrition.Core.Services.Contracts;
+using System.Threading.Tasks;
 
 namespace Nutrition.Api.Controllers
 {

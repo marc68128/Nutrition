@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,12 +11,11 @@ using Ninject;
 using Ninject.Activation;
 using Ninject.Infrastructure.Disposal;
 using Nutrition.Api.Configuration;
-using Nutrition.Repositories.Configuration;
-using Nutrition.Services.Configuration;
+using Nutrition.Api.ViewModels.Configuration;
+using Nutrition.Core.Repositories.Configuration;
+using Nutrition.Core.Services.Configuration;
 using System;
 using System.Threading;
-using AutoMapper;
-using Nutrition.Api.ViewModels.Configuration;
 
 namespace Nutrition.Api
 {

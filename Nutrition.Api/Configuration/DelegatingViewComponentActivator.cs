@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.ViewComponents;
+﻿using Microsoft.AspNetCore.Mvc.ViewComponents;
+using System;
 
 namespace Nutrition.Api.Configuration
 {
@@ -19,10 +16,14 @@ namespace Nutrition.Api.Configuration
             this.viewComponentReleaser = viewComponentReleaser ?? (_ => { });
         }
 
-        public object Create(ViewComponentContext context) =>
-            this.viewComponentCreator(context.ViewComponentDescriptor.TypeInfo.AsType());
+        public object Create(ViewComponentContext context)
+        {
+            return this.viewComponentCreator(context.ViewComponentDescriptor.TypeInfo.AsType());
+        }
 
-        public void Release(ViewComponentContext context, object viewComponent) =>
+        public void Release(ViewComponentContext context, object viewComponent)
+        {
             this.viewComponentReleaser(viewComponent);
+        }
     }
 }

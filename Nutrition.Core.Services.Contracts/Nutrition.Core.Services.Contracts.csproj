@@ -1,17 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="Ninject" Version="3.3.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Nutrition.Core.Dtos\Nutrition.Core.Dtos.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
     <ProjectReference Include="..\Nutrition.Dtos\Nutrition.Dtos.csproj" />
+    <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
   </ItemGroup>
 
 </Project>
