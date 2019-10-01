@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition", "Nutrition\Nutrition.csproj", "{7E13C550-1C0E-4823-BF7C-4EA1D52C85C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Wpf", "Nutrition\Nutrition.Wpf.csproj", "{7E13C550-1C0E-4823-BF7C-4EA1D52C85C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Domain", "Nutrition.Domain\Nutrition.Domain.csproj", "{1CA96660-95EE-4EF7-AFB8-9AA9CB5F2E9A}"
 EndProject
@@ -19,11 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Services", "Nutri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Services.Contracts", "Nutrition.Services.Contracts\Nutrition.Services.Contracts.csproj", "{4F8A4010-74BA-48D0-AE9F-98E45F8EB010}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.ViewModels", "Nutrition.ViewModels\Nutrition.ViewModels.csproj", "{797CCC46-53BD-4D03-8579-CD34BE311FA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Wpf.ViewModels", "Nutrition.ViewModels\Nutrition.Wpf.ViewModels.csproj", "{797CCC46-53BD-4D03-8579-CD34BE311FA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.ViewModels.Contracts", "Nutrition.ViewModels.Contracts\Nutrition.ViewModels.Contracts.csproj", "{7D7F60E0-322F-4109-92DC-6EB8C9D950F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Wpf.ViewModels.Contracts", "Nutrition.ViewModels.Contracts\Nutrition.Wpf.ViewModels.Contracts.csproj", "{7D7F60E0-322F-4109-92DC-6EB8C9D950F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition.Views", "Nutrition.Views\Nutrition.Views.csproj", "{3939630F-961D-460E-A404-92BC2F21E99C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Wpf.Views", "Nutrition.Views\Nutrition.Wpf.Views.csproj", "{3939630F-961D-460E-A404-92BC2F21E99C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{77E522A9-EAE9-4D91-B5AC-2A1CD520970D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsApp", "WindowsApp", "{E6D7375B-8A59-44D9-8245-42445CAD85CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{9BACD5F9-814E-468F-8700-08B6ADB03A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition.Api", "Nutrition.Api\Nutrition.Api.csproj", "{BF8103EC-1830-4802-B91E-E8B95E0DE81F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,9 +83,27 @@ Global
 		{3939630F-961D-460E-A404-92BC2F21E99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3939630F-961D-460E-A404-92BC2F21E99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3939630F-961D-460E-A404-92BC2F21E99C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8103EC-1830-4802-B91E-E8B95E0DE81F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E13C550-1C0E-4823-BF7C-4EA1D52C85C1} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
+		{1CA96660-95EE-4EF7-AFB8-9AA9CB5F2E9A} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{031E4C98-DB3F-4AA1-AE71-34516B214921} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{D6C4586E-1B1E-43F5-83F0-C3194C9D3320} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{1A8E3935-4D7C-4950-939F-C59789EC7BCD} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{71438934-2D55-473F-874E-65813D72A200} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{1C587463-1AA9-4CDC-B88A-E05C44E69EEF} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{4F8A4010-74BA-48D0-AE9F-98E45F8EB010} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{797CCC46-53BD-4D03-8579-CD34BE311FA2} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
+		{7D7F60E0-322F-4109-92DC-6EB8C9D950F0} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
+		{3939630F-961D-460E-A404-92BC2F21E99C} = {E6D7375B-8A59-44D9-8245-42445CAD85CE}
+		{BF8103EC-1830-4802-B91E-E8B95E0DE81F} = {9BACD5F9-814E-468F-8700-08B6ADB03A8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4938BA26-1EA3-417F-B59F-752B8FF33133}

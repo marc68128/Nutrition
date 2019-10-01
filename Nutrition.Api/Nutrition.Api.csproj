@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Repositories\Nutrition.Repositories.csproj" />
+    <ProjectReference Include="..\Nutrition.Services.Contracts\Nutrition.Services.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.Services\Nutrition.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\Aliments.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

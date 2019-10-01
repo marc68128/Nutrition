@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Ninject.Modules;
-using Nutrition.ViewModels.Contracts;
+﻿using Ninject.Modules;
+using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition.ViewModels.Configuration
+namespace Nutrition.Wpf.ViewModels.Configuration
 {
     public class ViewModelModule : NinjectModule
     {

@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
-    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.ViewModels.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.Wpf.ViewModels.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>

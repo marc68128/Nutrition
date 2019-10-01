@@ -1,7 +1,6 @@
-﻿using System;
-using Nutrition.Enums;
+﻿using Nutrition.Enums;
 
-namespace Nutrition.ViewModels.Contracts
+namespace Nutrition.Wpf.ViewModels.Contracts
 {
     public interface IAlimentViewModel
     {
@@ -13,5 +12,6 @@ namespace Nutrition.ViewModels.Contracts
         double Glucides { get; set; }
         EnumAlimentCategory Category { get; set; }
         string SubCategory { get; set; }
+        EnumUnit Unit { get; set; }
     }
 }

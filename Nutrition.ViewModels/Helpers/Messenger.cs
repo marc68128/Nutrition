@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nutrition.ViewModels.Helpers
+namespace Nutrition.Wpf.ViewModels.Helpers
 {
     public class Messenger
     {

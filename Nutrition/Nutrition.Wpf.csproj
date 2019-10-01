@@ -14,9 +14,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Nutrition.Repositories\Nutrition.Repositories.csproj" />
     <ProjectReference Include="..\Nutrition.Services\Nutrition.Services.csproj" />
-    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.ViewModels.Contracts.csproj" />
-    <ProjectReference Include="..\Nutrition.ViewModels\Nutrition.ViewModels.csproj" />
-    <ProjectReference Include="..\Nutrition.Views\Nutrition.Views.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels.Contracts\Nutrition.Wpf.ViewModels.Contracts.csproj" />
+    <ProjectReference Include="..\Nutrition.ViewModels\Nutrition.Wpf.ViewModels.csproj" />
+    <ProjectReference Include="..\Nutrition.Views\Nutrition.Wpf.Views.csproj" />
   </ItemGroup>
 
 </Project>

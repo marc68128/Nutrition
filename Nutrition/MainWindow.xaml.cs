@@ -1,7 +1,7 @@
-﻿using Nutrition.ViewModels.Contracts;
-using System.Windows;
+﻿using System.Windows;
+using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition
+namespace Nutrition.Wpf
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

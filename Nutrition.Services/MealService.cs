@@ -1,9 +1,11 @@
 ﻿using Nutrition.Dtos;
+using Nutrition.Enums;
 using Nutrition.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Nutrition.Services
 {
@@ -18,27 +20,54 @@ namespace Nutrition.Services
             _random = new Random();
         }
 
-        public MealDto GetRandomMeal(MealGoalsDto goals, int alimentCount)
+        public Task<MealDto> GetRandomMealAsync(MealGoalsDto goals, int alimentCount)
         {
-            MealDto meal;
-
-            var aliments = _alimentService.GetAll();
-
-            do
+            return Task.Factory.StartNew(() =>
             {
-                meal = new MealDto();
+                MealDto meal;
 
-                for (int i = 0; i < alimentCount; i++)
+                var aliments = _alimentService.GetAll();
+
+                do
                 {
-                    meal.MealParts.Add(new MealPartDto
-                    {
-                        Aliment = aliments[_random.Next(0, aliments.Count - 1)]
-                    });
+                    meal = GenerateMealWithRandomAliments(alimentCount, aliments);
+                    meal = ComputeBestQuantities(meal, goals);
+                } while (!MatchGoals(meal));
+
+
+                return meal;
+            });
+        }
+
+        private MealDto GenerateMealWithRandomAliments(int alimentCount, List<AlimentDto> alimentList)
+        {
+            var meal = new MealDto();
+            var category = EnumAlimentCategory.Protides;
+
+            for (int i = 0; i < alimentCount; i++)
+            {
+                var filteredAliments = alimentList.Where(a => a.Category == category).ToList();
+                meal.MealParts.Add(new MealPartDto
+                {
+                    Aliment = filteredAliments[_random.Next(0, filteredAliments.Count() - 1)]
+                });
+
+                switch (category)
+                {
+                    case EnumAlimentCategory.Protides:
+                        category = EnumAlimentCategory.Glucides;
+                        break;
+                    case EnumAlimentCategory.Glucides:
+                        category = EnumAlimentCategory.Lipides;
+                        break;
+                    case EnumAlimentCategory.Lipides:
+                        category = EnumAlimentCategory.Vegetables;
+                        break;
+                    case EnumAlimentCategory.Vegetables:
+                        category = EnumAlimentCategory.Protides;
+                        break;
                 }
-
-                meal = ComputeBestQuantities(meal, goals);
-            } while (!MatchGoals(meal));
-
+            }
 
             return meal;
         }
@@ -54,7 +83,7 @@ namespace Nutrition.Services
             var combos = GetAllPossibleCombos(meal.MealParts.Count);
 
             double minRes = double.MaxValue;
-            List<double> bestValue = null; 
+            List<double> bestValue = null;
 
             foreach (var combo in combos)
             {
@@ -88,7 +117,7 @@ namespace Nutrition.Services
                 meal.MealParts[i].Quantity = bestValue[i];
             }
 
-            meal.Accuracy = Math.Max(0, 100 - minRes); 
+            meal.Accuracy = Math.Max(0, 100 - minRes);
 
             return meal;
         }
@@ -98,7 +127,7 @@ namespace Nutrition.Services
             Debug.WriteLine(meal.Accuracy);
             if (meal.MealParts.Any(m => m.Quantity == 0) || meal.Accuracy < 50)
             {
-                return false; 
+                return false;
             }
             return true;
         }
@@ -125,8 +154,8 @@ namespace Nutrition.Services
 
             foreach (var inner in lists)
                 combos = from c in combos
-                    from i in inner
-                    select c.Append(i).ToList();
+                         from i in inner
+                         select c.Append(i).ToList();
 
             return combos.Select(x => x.ToList()).ToList();
         }

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using AutoMapper;
 using Ninject;
 using Nutrition.Repositories.Configuration;
 using Nutrition.Services.Configuration;
-using Nutrition.ViewModels.Configuration;
+using Nutrition.Wpf.ViewModels.Configuration;
 
-namespace Nutrition
+namespace Nutrition.Wpf
 {
     /// <summary>
     /// Interaction logic for App.xaml

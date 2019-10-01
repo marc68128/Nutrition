@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Nutrition.ViewModels.Contracts;
+﻿using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition.ViewModels
+namespace Nutrition.Wpf.ViewModels
 {
-    internal class MealPartViewModel : IMealPartViewModel
+    internal class MealPartViewModel : BaseViewModel, IMealPartViewModel
     {
         public IAlimentViewModel Aliment { get; set; }
         public double Quantity { get; set; }
+        public double TotalQuantity => Quantity * Aliment.Quantity;
     }
 }

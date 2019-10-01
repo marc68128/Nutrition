@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Nutrition
+namespace Nutrition.Wpf
 {
     /// <summary>
     /// Provides a data template selector which honors data templates targeting interfaces implemented by the

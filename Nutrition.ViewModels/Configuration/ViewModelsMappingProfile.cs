@@ -1,7 +1,7 @@
 ﻿using Nutrition.Dtos;
-using Nutrition.ViewModels.Contracts;
+using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition.ViewModels.Configuration
+namespace Nutrition.Wpf.ViewModels.Configuration
 {
     public class ViewModelsMappingProfile : AutoMapper.Profile
     {

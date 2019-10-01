@@ -13,7 +13,7 @@ namespace Nutrition.Repositories
 {
     internal class AlimentRepository : IAlimentRepository
     {
-        private const string AlimentDbPath = @"C:\Users\Marc\Documents\Manu\Aliments.csv";
+        private const string AlimentDbPath = @"Data\Aliments.csv";
 
         public List<Aliment> GetAll()
         {

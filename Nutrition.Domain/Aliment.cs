@@ -13,5 +13,6 @@ namespace Nutrition.Domain
         public double Glucides { get; set; }
         public EnumAlimentCategory Category { get; set; }
         public string SubCategory { get; set; }
+        public EnumUnit Unit { get; set; }
     }
 }

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Ninject;
-using Nutrition.ViewModels.Contracts;
-using Nutrition.ViewModels.Helpers;
+using Nutrition.Wpf.ViewModels.Contracts;
+using Nutrition.Wpf.ViewModels.Helpers;
 
-namespace Nutrition.ViewModels
+namespace Nutrition.Wpf.ViewModels
 {
     internal class MainViewModel : BaseViewModel, IMainViewModel
     {

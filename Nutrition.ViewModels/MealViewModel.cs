@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Nutrition.Dtos;
-using Nutrition.ViewModels.Contracts;
+using Nutrition.Wpf.ViewModels.Contracts;
 
-namespace Nutrition.ViewModels
+namespace Nutrition.Wpf.ViewModels
 {
     internal class MealViewModel : IMealViewModel
     {

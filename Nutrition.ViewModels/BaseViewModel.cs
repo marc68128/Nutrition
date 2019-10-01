@@ -1,8 +1,7 @@
-﻿using Nutrition.ViewModels.Annotations;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Nutrition.ViewModels
+namespace Nutrition.Wpf.ViewModels
 {
     internal abstract class BaseViewModel : INotifyPropertyChanged
     {
