@@ -1,0 +1,81 @@
+<div [hidden]="meal == null">
+
+    <table class="table is-fullwidth is-striped">
+        <thead>
+            <tr>
+                <th>Ingrédient</th>
+                <th>Quantité</th>
+                <th>Calories</th>
+                <th>Protides</th>
+                <th>Lipides</th>
+                <th>Glucide</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Totaux</th>
+                <td></td>
+                <td>{{totalCalories | number:'1.0-2'}}</td>
+                <td>{{totalProtides | number:'1.0-2'}}</td>
+                <td>{{totalLipides | number:'1.0-2'}}</td>
+                <td>{{totalGlucides | number:'1.0-2'}}</td>
+            </tr>
+            
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let mealPart of mealParts">
+                <th>{{mealPart.aliment.name}}</th>
+                <td>{{mealPart.totalQuantity | number:'1.0-2'}} {{mealPart.aliment.unit}}</td>
+                <td>{{mealPart.totalCalories | number:'1.0-2'}}</td>
+                <td>{{mealPart.totalProtides | number:'1.0-2'}}</td>
+                <td>{{mealPart.totalLipides | number:'1.0-2'}}</td>
+                <td>{{mealPart.totalGlucides | number:'1.0-2'}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <div class="control">
+        <button class="button is-primary" (click)="generateNew()">Nouveau</button>
+    </div>
+</div>
+
+<form [hidden]="meal != null">
+    <div class="field"> 
+        <label class="label">Nombre d'aliment : </label>
+        <div class="control">
+            <input class="input" [(ngModel)]="alimentCount" type="number" name="alimentCount" />
+        </div>
+    </div>    
+    <div class="field"> 
+        <label class="label">Objectif calories : </label>
+        <div class="control">
+            <input class="input" [(ngModel)]="goalCalories" type="number" name="goalCalories" />
+        </div>
+    </div>
+    <div class="field"> 
+        <label class="label">Objectif protides : </label>
+        <div class="control">
+            <input class="input" [(ngModel)]="goalProtides" type="number" name="goalProtides" />
+        </div>
+    </div>
+    <div class="field"> 
+        <label class="label">Objectif lipides : </label>
+        <div class="control">
+            <input class="input" [(ngModel)]="goalLipides" type="number" name="goalLipides" />
+        </div>
+    </div>
+    <div class="field"> 
+        <label class="label">Objectif glucides : </label>
+        <div class="control">
+            <input class="input" [(ngModel)]="goalGlucides" type="number" name="goalGlucides" />
+        </div>
+    </div>
+    <div class="field"> 
+        <div class="control">
+            <button class="button is-primary" (click)="generate()">Genérer</button>
+        </div>
+    </div>
+</form>
+
+

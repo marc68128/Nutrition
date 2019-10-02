@@ -16,6 +16,7 @@ using Nutrition.Core.Repositories.Configuration;
 using Nutrition.Core.Services.Configuration;
 using System;
 using System.Threading;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Nutrition.Api
 {
@@ -52,6 +53,12 @@ namespace Nutrition.Api
             services.AddRequestScopingMiddleware(() => scopeProvider.Value = new Scope());
             services.AddCustomControllerActivation(Resolve);
             services.AddCustomViewComponentActivation(Resolve);
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAnyOrigin",
+                    builder => builder.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +71,7 @@ namespace Nutrition.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAnyOrigin");
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -74,6 +82,8 @@ namespace Nutrition.Api
             {
                 endpoints.MapControllers();
             });
+
+
         }
 
         private IKernel RegisterApplicationComponents(IApplicationBuilder app)

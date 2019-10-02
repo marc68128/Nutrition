@@ -5,9 +5,11 @@ using Nutrition.Api.ViewModels;
 using Nutrition.Core.Dtos;
 using Nutrition.Core.Services.Contracts;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace Nutrition.Api.Controllers
 {
+    [EnableCors("AllowAnyOrigin")]
     [ApiController]
     [Route("[controller]")]
     public class MealController : ControllerBase
