@@ -13,7 +13,7 @@
     <ProjectReference Include="..\Nutrition.Api.ViewModels\Nutrition.Api.ViewModels.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Dtos\Nutrition.Core.Dtos.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
-    <ProjectReference Include="..\Nutrition.Core.Repositories\Nutrition.Core.Repositories.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Repositories.EntityFramework\Nutrition.Core.Repositories.EntityFramework.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Services.Contracts\Nutrition.Core.Services.Contracts.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Services\Nutrition.Core.Services.csproj" />
   </ItemGroup>

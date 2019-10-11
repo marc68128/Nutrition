@@ -39,6 +39,21 @@ namespace Nutrition.Core.Services
             });
         }
 
+        public MealDto GetRandomMeal(MealGoalsDto goals, int alimentCount)
+        {
+            MealDto meal;
+
+            var aliments = _alimentService.GetAll();
+
+            do
+            {
+                meal = GenerateMealWithRandomAliments(alimentCount, aliments);
+                meal = ComputeBestQuantities(meal, goals);
+            } while (!MatchGoals(meal));
+
+            return meal;
+        }
+
         private MealDto GenerateMealWithRandomAliments(int alimentCount, List<AlimentDto> alimentList)
         {
             var meal = new MealDto();

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\Nutrition.Api\appsettings.Development.json" Link="appsettings.Development.json" />
+    <Content Include="..\Nutrition.Api\appsettings.json" Link="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nutrition.Core.Domain\Nutrition.Core.Domain.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
+    <ProjectReference Include="..\Nutrition.Core.Repositories.Contracts\Nutrition.Core.Repositories.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

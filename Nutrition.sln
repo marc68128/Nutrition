@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Core.Services", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrition.Core.Services.Contracts", "Nutrition.Core.Services.Contracts\Nutrition.Core.Services.Contracts.csproj", "{3AB081A8-F1E3-4704-A38C-58D4B02820A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrition.Core.Repositories.EntityFramework", "Nutrition.Core.Repositories.EntityFramework\Nutrition.Core.Repositories.EntityFramework.csproj", "{CA6A21F4-662A-40B9-A6D4-E2C06525B33E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{3AB081A8-F1E3-4704-A38C-58D4B02820A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AB081A8-F1E3-4704-A38C-58D4B02820A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AB081A8-F1E3-4704-A38C-58D4B02820A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6A21F4-662A-40B9-A6D4-E2C06525B33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6A21F4-662A-40B9-A6D4-E2C06525B33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6A21F4-662A-40B9-A6D4-E2C06525B33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6A21F4-662A-40B9-A6D4-E2C06525B33E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{4938C773-3DE0-4352-A11E-AF81E1126B28} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
 		{776526A8-7905-4364-BE22-5AB06145A939} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
 		{3AB081A8-F1E3-4704-A38C-58D4B02820A6} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
+		{CA6A21F4-662A-40B9-A6D4-E2C06525B33E} = {77E522A9-EAE9-4D91-B5AC-2A1CD520970D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4938BA26-1EA3-417F-B59F-752B8FF33133}

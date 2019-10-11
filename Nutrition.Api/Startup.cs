@@ -12,11 +12,10 @@ using Ninject.Activation;
 using Ninject.Infrastructure.Disposal;
 using Nutrition.Api.Configuration;
 using Nutrition.Api.ViewModels.Configuration;
-using Nutrition.Core.Repositories.Configuration;
+using Nutrition.Core.Repositories.EntityFramework.Configuration;
 using Nutrition.Core.Services.Configuration;
 using System;
 using System.Threading;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Nutrition.Api
 {
@@ -97,7 +96,9 @@ namespace Nutrition.Api
                 kernel.Bind(ctrlType).ToSelf().InScope(RequestScope);
             }
 
-            kernel.Load(new RepositoryModule());
+            var connectionString = Configuration.GetValue<string>("ConnectionStrings:NutContext");
+
+            kernel.Load(new RepositoryModule(connectionString));
             kernel.Load(new ServiceModule());
 
             var createLoggerMethod = typeof(LoggerFactoryExtensions).GetMethod(nameof(LoggerFactoryExtensions.CreateLogger), new[] { typeof(ILoggerFactory) });

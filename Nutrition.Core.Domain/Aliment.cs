@@ -4,6 +4,7 @@ namespace Nutrition.Core.Domain
 {
     public class Aliment
     {
+        public int Id { get; set; }
         public int Quantity { get; set; }
         public string Name { get; set; }
         public double Calories { get; set; }

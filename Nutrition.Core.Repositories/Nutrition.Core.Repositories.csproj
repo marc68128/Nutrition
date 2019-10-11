@@ -13,9 +13,6 @@
     <ProjectReference Include="..\Nutrition.Core.Domain\Nutrition.Core.Domain.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Enums\Nutrition.Core.Enums.csproj" />
     <ProjectReference Include="..\Nutrition.Core.Repositories.Contracts\Nutrition.Core.Repositories.Contracts.csproj" />
-    <ProjectReference Include="..\Nutrition.Domain\Nutrition.Domain.csproj" />
-    <ProjectReference Include="..\Nutrition.Enums\Nutrition.Enums.csproj" />
-    <ProjectReference Include="..\Nutrition.Repositories.Contracts\Nutrition.Repositories.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
